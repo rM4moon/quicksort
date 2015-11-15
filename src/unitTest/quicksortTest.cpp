@@ -30,7 +30,6 @@ void QuicksortTest::TearDown()
 	printf("QuicksortTest TestCase Environment Tear-Down. \n");
 }
 
-
 TEST_F(QuicksortTest, test0)
 {
 	printf("hello QuicksortTest test0\n");
@@ -39,7 +38,7 @@ TEST_F(QuicksortTest, test0)
 	timeval currentTimeBegin;
 	timeval currentTimeEnd;
 
-	int arrayNum = 500000;
+	int arrayNum = 400000;
 	int a[arrayNum];
 	srand((int)time(0));
 	for(int x=0;x<arrayNum;x++)
@@ -59,5 +58,10 @@ TEST_F(QuicksortTest, test0)
 
 	delete pQuickSort;
 	pQuickSort = NULL;
+}
+
+TEST_F(QuicksortTest, test1)
+{
+	printf("hello QuicksortTest test1\n");
 }
 
