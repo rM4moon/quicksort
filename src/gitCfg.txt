@@ -1,0 +1,75 @@
+ Set up Git Configuration
+
+Setup your Git credentials. This procedure needs to be executed once per HUB/Site.
+Prerequisites 	Users: General 	
+
+    You are in command shell
+
+	
+
+Procedure:
+
+    Set your git user name
+        git config --global user.name $USER
+    Set your git email
+
+        git config --global user.email <your ericsson email>
+
+    e.g git config --global user.email johndoe@example.com
+    Add a little color
+        git config --global color.status auto
+        git config --global color.diff auto
+    For color, you may need to add this to your .cshrc.user file
+        setenv LESS '-M -I -R'
+    Set your merge tool
+        git config --global merge.tool kdiff3
+
+Next:Continue.
+Setup your editor
+
+The primary use of the editor is for writing commit messages. It is also used during interactive rebases (git rebase -i). If you don't set the editor in git, git will default to whatever your $EDITOR environment variable is set to.
+Use one of the following procedures:
+
+Procedure:emacs
+
+    To setup emacs as your editor
+        git config --global core.editor "emacs"
+
+Next:n/a
+
+Procedure:gvim
+
+    To setup gvim as your editor
+        git config --global core.editor "gvim -f"
+
+Next:Continue.
+Setup your pager
+See Also
+• pagers
+
+Your pager is the command that git will use to send its command output.
+Use one of the following procedures:
+
+Procedure:cat
+
+    If you want all info to be output in the shell set:
+        git config --global core.pager "cat"
+
+Next:If you use this you need to use limiting flags on some command to avoid getting too much info. Ex: git log -n 5
+
+Procedure:less
+
+    To be able to see coloured SHA1 tags instead of ESC codes (for example in git log) set
+        git config --global core.pager "less -r"
+    The less utility is a vast improvement over the default pager more. It can be configured using the LESS environment variable. Here is a example configuration. If you configure the git core.pager to use less, you will probably prefer to use --QUIT-AT-EOF instead of --quit-at-eof.
+    Do one of the following:
+        For cshell:
+            setenv PAGER less
+            setenv LESS "--ignore-case --quit-at-eof --LONG-PROMPT --squeeze-blank-lines --HILITE-UNREAD --search-skip-screen --RAW-CONTROL-CHARS"
+        For bash:
+            export PAGER=less|export LESS="--ignore-case --quit-at-eof --LONG-PROMPT --squeeze-blank-lines --HILITE-UNREAD --search-skip-screen --RAW-CONTROL-CHARS"
+
+        The last option is necessary on the 2100 Phoenix pool.
+
+Next:Continue.
+
