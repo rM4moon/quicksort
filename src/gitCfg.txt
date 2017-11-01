@@ -5,8 +5,6 @@ Prerequisites 	Users: General
 
     You are in command shell
 
-	
-
 Procedure:
 
     Set your git user name
