@@ -1,4 +1,4 @@
- Set up Git Configuration
+Set up Git Configuration
 
 Setup your Git credentials. This procedure needs to be executed once per HUB/Site.
 Prerequisites 	Users: General 	
