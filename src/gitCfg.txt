@@ -3,7 +3,7 @@ Set up Git Configuration
 Setup your Git credentials. This procedure needs to be executed once per HUB/Site.
 Prerequisites 	Users: General 	
 
-    You are in command shell
+    You are in command shell.
 
 Procedure:
 
